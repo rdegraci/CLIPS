@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -580,7 +580,6 @@
 		B5FB532C09AD4203001AE877 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FB532B09AD4203001AE877 /* main.m */; };
 		B5FB533109AD425F001AE877 /* CLIPS.icns in Resources */ = {isa = PBXBuildFile; fileRef = B5FB533009AD425F001AE877 /* CLIPS.icns */; };
 		B5FB533409AD4276001AE877 /* CLIPSTerminal.nib in Resources */ = {isa = PBXBuildFile; fileRef = B5FB533209AD4276001AE877 /* CLIPSTerminal.nib */; };
-		B5FB533C09AD42E6001AE877 /* CLIPS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5FB533B09AD42E6001AE877 /* CLIPS-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -643,7 +642,7 @@
 		B53E50CC09B0FD8A00F72EB0 /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PreferenceController.m; path = Interface_Source/PreferenceController.m; sourceTree = "<group>"; };
 		B53E50D809B1046500F72EB0 /* CLIPSTerminalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLIPSTerminalController.h; path = Interface_Source/CLIPSTerminalController.h; sourceTree = "<group>"; };
 		B53E50D909B1046500F72EB0 /* CLIPSTerminalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLIPSTerminalController.m; path = Interface_Source/CLIPSTerminalController.m; sourceTree = "<group>"; };
-		B54846B20D5137FB0025757C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		B54846B20D5137FB0025757C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		B5491E780BB18E2C00206EA5 /* ModuleArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModuleArrayController.h; path = Interface_Source/ModuleArrayController.h; sourceTree = "<group>"; };
 		B5491E790BB18E2C00206EA5 /* ModuleArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModuleArrayController.m; path = Interface_Source/ModuleArrayController.m; sourceTree = "<group>"; };
 		B549628F09BA9D6100697F33 /* CogDown.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = CogDown.tiff; path = Resources/CogDown.tiff; sourceTree = "<group>"; };
@@ -1803,9 +1802,16 @@
 /* Begin PBXProject section */
 		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
 			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "CLIPS" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* CLIPSEditor */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1849,7 +1855,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5FB533C09AD42E6001AE877 /* CLIPS-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2374,10 +2379,6 @@
 		1E6F78CD0D502A6500B9DCFB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					i386,
-					ppc,
-				);
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"WINDOW_INTERFACE=1",
@@ -2386,7 +2387,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+				SDKROOT = macosx;
 				VALID_ARCHS = "ppc64 ppc7400 ppc970 i386 x86_64 ppc";
 			};
 			name = Release;
@@ -2420,6 +2421,7 @@
 		1E6F78CF0D502A6500B9DCFB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2441,6 +2443,7 @@
 		1E6F78D00D502A6500B9DCFB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -2496,6 +2499,7 @@
 		B5BCEF5809AD23C0000E597B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -2525,6 +2529,7 @@
 		C05733C808A9546B00998B17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2546,10 +2551,6 @@
 		C05733CC08A9546B00998B17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					i386,
-					ppc,
-				);
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"WINDOW_INTERFACE=1",
@@ -2557,8 +2558,9 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+				SDKROOT = macosx;
 				VALID_ARCHS = "ppc64 ppc7400 ppc970 i386 x86_64 ppc";
 			};
 			name = Debug;
